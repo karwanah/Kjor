@@ -1,32 +1,62 @@
-import { StatusBar } from 'expo-status-bar';
+
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import { Touchable } from 'react-native-web';
+import { StyleSheet, Text, View, Image, Linking} from 'react-native';
+import { Button } from 'react-native-ios-kit';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Image style={{width:128, resizeMode:'contain', bottom:250}} source={require('./assets/img/logo.png')} />
-      <Text style={styles.maintext}>Velkommen!{'\n'} Kjør vekk med en av 100+ biler i Oslo </Text>
-      <StatusBar style="auto"/>
+  <Text style={styles.maintext}>Kjør vekk med en av 100+ biler i Oslo </Text>
+      <Image style={{width:100, resizeMode:'contain', bottom:200}} source={require('./assets/img/logo.png')} />
+  <Text style={styles.kjor} >Book, Åpne, Kjør</Text>
+    <Button style={styles.button} inline rounded onPress={ ()=>{ Linking.openURL('https://karwana.ddns.net')}}>
+  <Text style={styles.text}>
+    Kom i gang
+    </Text>
+</Button>
     </View>
   );
 }
 
-
-
+// STYLE VARIABLE
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#53A2BE',
+    backgroundColor: '#272D2D',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "space-evenly",
   },
   maintext: {
-    color:'#fff',
-    bottom: 350, 
-    fontSize:32, 
+    bottom: -150, 
+    fontSize:28, 
+    width:300,
     textAlign:"center", 
-    fontWeight:'500',
-  }
+    fontWeight:'normal',
+    color:"#fff",
+  },
+  kjor:{
+    bottom: 50, 
+    fontSize:38, 
+    textAlign:"center", 
+    fontWeight:'600',
+    color:"#0FFF95",
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor:0,
+    borderRadius: 40,
+    elevation: 4,
+    width: 270,
+    height: 85,
+    backgroundColor: '#001A23',
+    bottom:25,  
+  },
+  text: {
+    textAlign:'center',
+    fontSize:22,
+    fontWeight: 'bold',
+    color: 'white',
+  },
+  
 });
