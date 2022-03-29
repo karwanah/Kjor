@@ -1,3 +1,4 @@
+
 // Home
 import React from 'react';
 import { StyleSheet, Text, View, Image, Linking, TextInput, SafeAreaView, DatePickerIOS} from 'react-native';
@@ -6,36 +7,38 @@ import { NavigationContainer } from '@react-navigation/native';
 
 const styles = require('../styles/styles')
 
-export function RegisterScreen({navigation}) {
+export function LoginScreen({navigation}) {
 
   return(
     <View style={{backgroundColor:"#4361EE", flex: 1, justifyContent: "space-evenly", alignItems: "center"}}>
-      <SafeAreaView>
-      <TextInput 
+      <SafeAreaView style={{alignItems:"center"}}>
+       <Image style={{width:100, resizeMode:'contain', bottom:0}} source={require('../assets/img/logo.png')} />
+      
+      <TextInput
+        style={styles.input}
+      placeholder="     E-post"
+      />
+         <TextInput 
       style={styles.input}
-      placeholder="     Fullt Navn"
+      placeholder="     Passord"
+      
       />
-      <TextInput
-        style={styles.input}
-        placeholder="     E-post"
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="     Verifiser E-post "
-      />
-       <TextInput
-        style={styles.input}
-        placeholder="     Mobilnummer"
-         keyboardType='numeric'
-         maxLength={9}
-      />
+
     </SafeAreaView>
-    <Button 
-style={styles.button} inline rounded 
+ <SafeAreaView style={{bottom:100}}> 
+         <Button
 onPress={() => navigation.navigate('Maps')}>
 
-<Text style={styles.text}>Register</Text>
+<Text style={styles.logintext}>Login</Text>
 </Button>
+ <Button
+onPress={() => navigation.navigate('Register')}>
+
+<Text style={styles.registertext}>Register</Text>
+
+</Button>
+ </SafeAreaView>
+
     </View>
   );
 }

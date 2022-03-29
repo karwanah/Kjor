@@ -4,7 +4,7 @@ import { StyleSheet} from 'react-native';
 module.exports = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#272D2D',
+    backgroundColor: '#4361EE',
     alignItems: 'center',
     justifyContent: "space-evenly",
   },
@@ -34,13 +34,28 @@ module.exports = StyleSheet.create({
     color: 'white',
   },
   input:{
-    color:"white",    
-    height: 50,
-    width: 100,
-    margin: 12,
+    textAlign:"left",
+    backgroundColor: 'white', 
+    height: 75,
+    width: 300,
+    marginTop: 30,
     borderWidth: 2,
     padding: 10,
-    borderRadius:40
-  }
+    borderRadius:20
+  },
+  logintext: {
+    textAlign:'center',
+    fontSize:22,
+    marginTop: 30,
+    fontWeight: 'bold',
+    color: 'white',
+  },
+  registertext: {
+    textAlign:'center',
+    fontSize:22,
+    marginTop: 30,
+    fontWeight: 'bold',
+    color: '',
+  },
   
 });

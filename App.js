@@ -9,6 +9,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // Screen Imports (export functions)
 import {MainScreen} from './screens/MainScreen';
 import {RegisterScreen} from './screens/RegisterScreen';
+import {CarScreen} from './screens/CarScreen';
+import {LoginScreen} from './screens/LoginScreen';
 // STYLE VARIABLE
 
 const styles = require('./styles/styles')
@@ -21,6 +23,8 @@ function App() {
       <Stack.Navigator   screenOptions={{headerShown: false}}>
         <Stack.Screen name="Main" component={MainScreen} />
         <Stack.Screen name="Register" component={RegisterScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Maps" component={CarScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
