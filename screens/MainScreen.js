@@ -10,7 +10,7 @@ export function MainScreen({navigation}) {
   return (
     <View style={styles.container}>
       <Image style={{width:100, resizeMode:'contain', bottom:0}} source={require('../assets/img/logo.png')} />
-  <Text style={styles.kjor} >Book, Åpne, Kjør</Text>
+  <Text style={styles.kjor} >Book --> Åpne --> Kjør</Text>
     <Button style={styles.button} inline rounded
     onPress={() => navigation.navigate('Login')}
     >

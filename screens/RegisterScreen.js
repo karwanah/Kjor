@@ -13,19 +13,19 @@ export function RegisterScreen({navigation}) {
       <SafeAreaView>
       <TextInput 
       style={styles.input}
-      placeholder="     Fullt Navn"
+      placeholder="Fullt Navn"
       />
       <TextInput
         style={styles.input}
-        placeholder="     E-post"
+        placeholder="E-post"
       />
       <TextInput
         style={styles.input}
-        placeholder="     Verifiser E-post "
+        placeholder="Verifiser E-post "
       />
        <TextInput
         style={styles.input}
-        placeholder="     Mobilnummer"
+        placeholder="Mobilnummer"
          keyboardType='numeric'
          maxLength={9}
       />

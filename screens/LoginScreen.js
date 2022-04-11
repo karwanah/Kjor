@@ -5,6 +5,8 @@ import { StyleSheet, Text, View, Image, Linking, TextInput, SafeAreaView, DatePi
 import { Button } from 'react-native-ios-kit';
 import { NavigationContainer } from '@react-navigation/native';
 
+
+
 const styles = require('../styles/styles')
 
 export function LoginScreen({navigation}) {
@@ -16,17 +18,17 @@ export function LoginScreen({navigation}) {
       
       <TextInput
         style={styles.input}
-      placeholder="     E-post"
+      placeholder="E-post"
       />
          <TextInput 
       style={styles.input}
-      placeholder="     Passord"
+      placeholder="Passord"
       
       />
 
     </SafeAreaView>
  <SafeAreaView style={{bottom:100}}> 
-         <Button
+         <Button style={styles.loginbutton} inline rounded
 onPress={() => navigation.navigate('Maps')}>
 
 <Text style={styles.logintext}>Login</Text>
