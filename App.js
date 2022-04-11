@@ -21,10 +21,10 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator   screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Maps" component={CarScreen} />
         <Stack.Screen name="Main" component={MainScreen} />
         <Stack.Screen name="Register" component={RegisterScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Maps" component={CarScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
