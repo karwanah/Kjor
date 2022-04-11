@@ -1,61 +1,70 @@
 'use strict';
-import { StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 module.exports = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#4361EE',
     alignItems: 'center',
-    justifyContent: "space-evenly",
+    justifyContent: 'space-evenly',
   },
-  kjor:{
-    bottom: 0, 
-    fontSize:32, 
-    textAlign:"center",
-    fontFamily: 'Calibre,sans-serif', 
-    fontWeight:'500',
-    color:"#0FFF95",
+  kjor: {
+    bottom: 0,
+    fontSize: 28,
+    textAlign: 'center',
+    fontFamily: 'Calibre,sans-serif',
+    fontWeight: '700',
+    color: '#fff',
   },
   button: {
     alignItems: 'center',
     justifyContent: 'center',
-    borderColor:0,
+    borderColor: 0,
     borderRadius: 40,
     elevation: 4,
     width: 270,
     height: 85,
     backgroundColor: '#001A23',
-    bottom:25,  
+    bottom: 25,
   },
   text: {
-    textAlign:'center',
-    fontSize:22,
+    textAlign: 'center',
+    fontSize: 22,
     fontWeight: 'bold',
     color: 'white',
   },
-  input:{
-    textAlign:"left",
-    backgroundColor: 'white', 
+  input: {
+    textAlign: 'center',
+    backgroundColor: 'white',
     height: 75,
     width: 300,
     marginTop: 30,
-    borderWidth: 2,
+    borderWidth: 0,
     padding: 10,
-    borderRadius:20
+    borderRadius: 10,
   },
   logintext: {
-    textAlign:'center',
-    fontSize:22,
-    marginTop: 30,
+    textAlign: 'center',
+    fontSize: 22,
     fontWeight: 'bold',
     color: 'white',
   },
   registertext: {
-    textAlign:'center',
-    fontSize:22,
-    marginTop: 30,
-    fontWeight: 'bold',
+    textAlign: 'center',
+    fontSize: 22,
+    marginTop: 40,
+    fontWeight: '500',
     color: '',
   },
-  
+  loginbutton: {
+    top:20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor: 0,
+    borderRadius: 40,
+    elevation: 4,
+    width: 270,
+    height: 85,
+    backgroundColor: '#001A23',
+  },
 });
