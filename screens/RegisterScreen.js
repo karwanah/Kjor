@@ -36,6 +36,11 @@ onPress={() => navigation.navigate('Maps')}>
 
 <Text style={styles.text}>Register</Text>
 </Button>
+<Image 
+            source={require('../assets/img/bankid.png')}
+            style={{bottom:50, height: 100, width: 200, borderRadius:10}}
+            onPress={() => navigation.navigate('Maps')}
+          />
     </View>
   );
 }

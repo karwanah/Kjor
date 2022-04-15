@@ -57,7 +57,7 @@ module.exports = StyleSheet.create({
     color: '',
   },
   loginbutton: {
-    top:20,
+    marginTop:50,
     alignItems: 'center',
     justifyContent: 'center',
     borderColor: 0,
