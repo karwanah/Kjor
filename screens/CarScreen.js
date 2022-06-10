@@ -14,7 +14,6 @@ import { Button } from 'react-native-ios-kit';
 import { NavigationContainer } from '@react-navigation/native';
 import MapView from 'react-native-maps';
 import { Marker } from 'react-native-maps';
-import { Mong9po } from '../backend/connection';
 import { PROVIDER_GOOGLE, PROVIDER_DEFAULT } from 'react-native-maps';
 
 export function CarScreen({ navigation }) {
@@ -22,17 +21,18 @@ export function CarScreen({ navigation }) {
     <View style={styles.container}>
       {/*Render our MapView*/}
       <MapView
-        mapPadding={{ top: 0, right: 10, left: 0, bottom: 150 }}
+        mapPadding={{ top: 0, right: 20, left: 0, bottom: 150}}
         provider="google"
         customMapStyle={customStyle}
+        rotateEnabled='false'
         showsUserLocation={true}
         showsMyLocationButton={true}
         style={styles.map}
         initialRegion={{
           latitude: 59.911491,
           longitude: 10.757933,
-          latitudeDelta: 0.2,
-          longitudeDelta: 0.2,
+          latitudeDelta: 0.15,
+          longitudeDelta: 0.15,
         }}>
         <MapView.Marker
           coordinate={{ latitude: 59.911491, longitude: 10.757933 }}
@@ -70,7 +70,7 @@ export function CarScreen({ navigation }) {
           alignContent: 'center',
           flexDirection: 'row',
           marginTop: 600,
-          zIndex: 2,
+          zIndex:0,
         }}>
         <Button
           style={styles.button}
@@ -98,200 +98,131 @@ const styles = StyleSheet.create({
   },
   map: {
     ...StyleSheet.absoluteFillObject,
-    zIndex: 1,
+    zIndex: 0,
   },
   button: {
     alignItems: 'center',
     top: 0,
     justifyContent: 'center',
     borderColor: 0,
-    borderRadius: 20,
+    borderRadius: 10,
     elevation: 4,
-    width: 140,
-    height: 65,
-    backgroundColor: '#000',
-    bottom: 25,
+    width: 160,
+    height: 70,
+    backgroundColor: '#4464AD',
+    bottom: 50,
   },
   button1: {
     alignItems: 'center',
     top: 0,
     justifyContent: 'center',
     borderColor: 0,
-    borderRadius: 15,
+    borderRadius: 10,
     elevation: 4,
-    width: 140,
-    height: 65,
-    backgroundColor: '#4464AD',
-    bottom: 25,
+    width: 160,
+    height: 70,
+    backgroundColor: '#000',
+    bottom: 50,
   },
   text: {
     textAlign: 'center',
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: '300',
     color: 'white',
   },
 });
 
 
- const customStyle = [
-    {
-      elementType: 'geometry',
-      stylers: [
-        {
-          color: '#242f3e',
-        },
-      ],
+const customStyle = 
+[
+   {
+        "featureType": "water",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#b5cbe4"
+            }
+        ]
     },
     {
-      elementType: 'labels.text.fill',
-      stylers: [
-        {
-          color: '#ffb606',
-        },
-      ],
+        "featureType": "landscape",
+        "stylers": [
+            {
+                "color": "#efefef"
+            }
+        ]
     },
     {
-      elementType: 'labels.text.stroke',
-      stylers: [
-        {
-          color: '#242f3e',
-        },
-      ],
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#83a5b0"
+            }
+        ]
     },
     {
-      featureType: 'administrative.locality',
-      elementType: 'labels.text.fill',
-      stylers: [
-        {
-          color: '#ffb606',
-        },
-      ],
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#bdcdd3"
+            }
+        ]
     },
     {
-      featureType: 'poi',
-      elementType: 'labels.text.fill',
-      stylers: [
-        {
-          color: '#d59563',
-        },
-      ],
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
     },
     {
-      featureType: 'poi.park',
-      elementType: 'geometry',
-      stylers: [
-        {
-          color: '#263c3f',
-        },
-      ],
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#e3eed3"
+            }
+        ]
     },
     {
-      featureType: 'poi.park',
-      elementType: 'labels.text.fill',
-      stylers: [
-        {
-          color: '#00ff00',
-        },
-      ],
+        "featureType": "administrative",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "lightness": 33
+            }
+        ]
     },
     {
-      featureType: 'road',
-      elementType: 'geometry',
-      stylers: [
-        {
-          color: '#38414e',
-        },
-      ],
+        "featureType": "road"
     },
     {
-      featureType: 'road',
-      elementType: 'geometry.stroke',
-      stylers: [
-        {
-          color: '#212a37',
-        },
-      ],
+        "featureType": "poi.park",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "lightness": 20
+            }
+        ]
     },
+    {},
     {
-      featureType: 'road',
-      elementType: 'labels.text.fill',
-      stylers: [
-        {
-          color: '#9ca5b3',
-        },
-      ],
-    },
-    {
-      featureType: 'road.highway',
-      elementType: 'geometry',
-      stylers: [
-        {
-          color: '#746855',
-        },
-      ],
-    },
-    {
-      featureType: 'road.highway',
-      elementType: 'geometry.stroke',
-      stylers: [
-        {
-          color: '#1f2835',
-        },
-      ],
-    },
-    {
-      featureType: 'road.highway',
-      elementType: 'labels.text.fill',
-      stylers: [
-        {
-          color: '#f3d19c',
-        },
-      ],
-    },
-    {
-      featureType: 'transit',
-      elementType: 'geometry',
-      stylers: [
-        {
-          color: '#2f3948',
-        },
-      ],
-    },
-    {
-      featureType: 'transit.station',
-      elementType: 'labels.text.fill',
-      stylers: [
-        {
-          color: '#d59563',
-        },
-      ],
-    },
-    {
-      featureType: 'water',
-      elementType: 'geometry',
-      stylers: [
-        {
-          color: '#17263c',
-        },
-      ],
-    },
-    {
-      featureType: 'water',
-      elementType: 'labels.text.fill',
-      stylers: [
-        {
-          color: '#515c6d',
-        },
-      ],
-    },
-    {
-      featureType: 'water',
-      elementType: 'labels.text.stroke',
-      stylers: [
-        {
-          color: '#17263c',
-        },
-      ],
-    },
-  ];
-
+        "featureType": "road",
+        "stylers": [
+            {
+                "lightness": 20
+            }
+        ]
+    }
+]

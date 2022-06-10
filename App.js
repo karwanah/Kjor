@@ -10,6 +10,7 @@ import { MainScreen } from './screens/MainScreen';
 import { RegisterScreen } from './screens/RegisterScreen';
 import { CarScreen } from './screens/CarScreen';
 import { LoginScreen } from './screens/LoginScreen';
+import { signup } from './index';
 import { initializeApp } from 'firebase/app';
 
 // STYLE VARIABLE

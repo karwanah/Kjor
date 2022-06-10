@@ -20,11 +20,12 @@ export function LoginScreen({navigation}) {
       <TextInput
         style={styles.input}
       placeholder="E-post"
+      placeholderTextColor="#202020"
       />
          <TextInput 
       style={styles.input}
       placeholder="Passord"
-      
+      placeholderTextColor="#202020"
       />
 
     </SafeAreaView>
