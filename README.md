@@ -6,4 +6,4 @@
   src="/assets/Kjor.png"
   alt="Alt text"
   title="Optional title"
-  style="max-width: 200px">
+  style="width: 150px">
