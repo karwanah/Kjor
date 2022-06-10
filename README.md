@@ -3,7 +3,7 @@
 **Instant Car Rental**
 **Oslo**
 <img
-  src="/assets/kjor.png"
+  src="/assets/Kjor.png"
   alt="Alt text"
   title="Optional title"
-  style="display: inline-block; margin: 0 auto; max-width: 200px">
+  style="max-width: 200px">
